@@ -1,0 +1,57 @@
+{
+    "$schema": "http://json-schema.org/draft-06/schema#",
+    "$ref": "#/definitions/Welcome7",
+    "definitions": {
+        "Welcome7": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "students": {
+                    "type": "array",
+                    "items": {
+                        "$ref": "#/definitions/Student"
+                    }
+                }
+            },
+            "required": [
+                "students"
+            ],
+            "title": "Welcome7"
+        },
+        "Student": {
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "id": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "location": {
+                    "type": "string"
+                },
+                "phone": {
+                    "type": "string",
+                    "format": "integer"
+                },
+                "courses": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    }
+                },
+                "empty": {
+                    "type": "boolean"
+                },
+                "mapType": {
+                    "type": "string"
+                }
+            },
+            "required": [
+                "id"
+            ],
+            "title": "Student"
+        }
+    }
+}
